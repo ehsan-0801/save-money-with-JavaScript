@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Document</title>
   </head>
   <body>
@@ -23,13 +23,16 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-sm-12">
+            <!-- image section start -->
             <img
               class="w-100 p-2"
               width="500px"
               src="./images/calculate_money.jpg"
               alt=""
             />
+            <!-- image section end -->
           </div>
+          <!-- form section start -->
           <div class="col-md-6 col-sm-12 p-md-2">
             <form class="w-100 p-1 bg-form">
               <div class="row mb-3">
@@ -41,7 +44,7 @@
                   <input
                     type="email"
                     class="form-control"
-                    id="inputEmail"
+                    id="incomeInput"
                     placeholder="income"
                   />
                 </div>
@@ -57,8 +60,8 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="Food"
-                    placeholder="food"
+                    id="food_cost"
+                    placeholder="Food"
                   />
                 </div>
               </div>
@@ -72,7 +75,7 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="Rent"
+                    id="rent_cost"
                     placeholder="Rent"
                   />
                 </div>
@@ -87,7 +90,7 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="Clothes"
+                    id="clothes_cost"
                     placeholder="Clothes"
                   />
                 </div>
@@ -96,8 +99,8 @@
               <div class="row">
                 <div class="col-sm-10 offset-sm-2">
                   <button
-                    type="submit"
-                    id="calculate-btn"
+                    type="button"
+                    id="calculate_btn"
                     class="btn btn-primary w-100 text-center"
                   >
                     Calculate
@@ -105,8 +108,12 @@
                 </div>
               </div>
               <div class="my-2">
-                <h5 class="text-center">Total Expenses: <span></span></h5>
-                <h5 class="text-center">Balances: <span></span></h5>
+                <h5 class="text-center">
+                  Total Expenses: <span id="total_expenses"></span>
+                </h5>
+                <h5 class="text-center">
+                  Balances: <span id="balanceRemain"></span>
+                </h5>
               </div>
               <div class="row">
                 <div class="col-md-2">
@@ -127,8 +134,8 @@
                 <div class="col-md-2"><span>%</span></div>
                 <div class="col-md-4">
                   <button
-                    type="submit"
-                    id="save-btn"
+                    type="button"
+                    id="save_btn"
                     class="btn btn-primary w-100 text-center mx-auto"
                   >
                     save
@@ -136,10 +143,15 @@
                 </div>
               </div>
               <div class="my-3">
-                <h5 class="text-center">Saving Amount: <span></span></h5>
-                <h5 class="text-center">Remaining Balances: <span></span></h5>
+                <h5 class="text-center">
+                  Saving Amount: <span id="savingsAmount"></span>
+                </h5>
+                <h5 class="text-center">
+                  Remaining Balances: <span id="finalRemainingBalance"></span>
+                </h5>
               </div>
             </form>
+            <!-- form section end -->
           </div>
         </div>
       </div>
@@ -147,6 +159,7 @@
 
     <!-- main section end -->
 
-    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
