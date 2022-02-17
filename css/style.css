@@ -8,3 +8,8 @@ body{
 .bg-form{
     background: #F8F8F8;
 }
+/* error message styling */
+.error_msg{
+    background: #F8F8F8;
+    display: none;
+}

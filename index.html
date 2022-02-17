@@ -16,9 +16,32 @@
       Save Money
     </h1>
     <!-- header section end-->
-
+    <div id="error"></div>
     <!-- main section start -->
-
+    <!-- error handling part  start-->
+    <div class="notify_section">
+      <p id="error_msg1" class="error_msg mx-auto text-center w-25 shadow">
+        <i class="fa-solid fa-xmark text-danger"></i> food, rent and clothes
+        value can not be more than income value
+      </p>
+      <p id="error_msg2" class="error_msg mx-auto text-center w-25 shadow">
+        <i class="fa-solid fa-xmark text-danger"></i> Negetive value is not
+        permitted !!! please input positive one
+      </p>
+      <p id="error_msg3" class="error_msg mx-auto text-center w-25 shadow">
+        <i class="fa-solid fa-xmark text-danger"></i>
+        The input value is not a number or a null value!!!
+      </p>
+      <p id="error_msg4" class="error_msg mx-auto text-center w-25 shadow">
+        <i class="fa-solid fa-xmark text-danger"></i>
+        Wrong input !!! The sum of the values are more than Income Amount..
+      </p>
+      <p id="error_msg5" class="error_msg mx-auto text-center w-25 shadow">
+        <i class="fa-solid fa-xmark text-danger"></i>
+        Invalid Input !!! The saving percentage is more than remaining perentage
+      </p>
+    </div>
+    <!-- error handling part end-->
     <main>
       <div class="container">
         <div class="row">
@@ -34,7 +57,7 @@
           </div>
           <!-- form section start -->
           <div class="col-md-6 col-sm-12 p-md-2">
-            <form class="w-75 px-4 py-2 mx-auto bg-form">
+            <form class="w-75 px-4 py-3 mx-auto bg-form">
               <div class="row mb-3">
                 <h5 class="text-center fw-bold">Income</h5>
                 <label for="income" class="col-sm-2 col-form-label fw-bold"
@@ -48,7 +71,6 @@
                     placeholder="income"
                   />
                 </div>
-                <span id="msg1"></span>
               </div>
               <h5 class="text-center fw-bold">Expenses</h5>
               <div class="row mb-3">
@@ -80,6 +102,13 @@
                     placeholder="Rent"
                   />
                 </div>
+                <p
+                  id="error_msg4"
+                  class="error_msg mx-auto text-center w-25 shadow"
+                >
+                  <i class="fa-solid fa-xmark text-danger"></i>
+                  this is more than income Amount
+                </p>
               </div>
               <div class="row mb-3">
                 <label
@@ -156,11 +185,16 @@
           </div>
         </div>
       </div>
+      <br />
     </main>
 
     <!-- main section end -->
 
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/77fa6aa17c.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
